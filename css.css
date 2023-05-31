@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+:root{
+    font-family: 'Hepta Slab';
+    font-size: 50%;
+
+}
+
+body{
+    background-color: #121214;
+    color: white;
+    padding: 14rem 13.4rem 14rem 11rem;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 6px;
+
+}
+
+.grid{
+    display: grid;
+    gap: 3.2rem;
+
+}
+
+header{
+    position: fixed;
+    max-width: 30rem;
+
+}
+
+header h1{
+    font-size: 4.8rem;
+    font-weight: 480;
+
+}
+
+header i {
+    font-size: 3.2rem;
+    margin-top: 3.2rem;
+    display: block;
+}
+
+main{
+    margin-left: 50.6rem;
+
+}
+
+.model-1 .container:nth-child(1) {
+    grid-row: 1/3;
+
+}
+
+.model-1 .container:nth-child(1) img,
+.model-1 .container:nth-child(3) img {
+    aspect-ratio: 9/16;
+
+}
+
+.horizontal{
+    grid-column: 1/3;
+}
+
+.horizontal img { 
+    aspect-ratio: 16/9;
+}
+
+.model-2 .container:nth-child(3) {
+    grid-column: 2;
+    grid-row: 1/3;
+
+
+}
+
+
+.container{
+    position: relative;
+
+    outline: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.container span{
+    font-size: 2rem;
+    display: block;
+    width: 100%;
+    padding: 2.4rem;
+    position: absolute;
+    bottom: 0;
+
+    background-image: linear-gradient(to bottom, transparent, black 90%);
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all .6s;
+}
+
+.container:hover span{
+
+    visibility: visible;
+    opacity: 1;
+    border-radius: 6px;
+
+}
+
+
+.container:hover{
+outline-color:white ;
+
+}
+
+
+
+/*Layout sobreposto*/
+
+.HandleLayout{
+    display: none;
+    width: 100%;
+    height: 1000px;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4.5px);
+    position: absolute;
+    flex-direction: column;
+    padding: 25px;
+    align-items: center;
+}
+
+.positionicon{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+
+.close{
+    font-size: 36px;
+    cursor: pointer;
+    transition: all .3s;
+
+}
+
+.close:hover{
+    color: red;
+
+}
+
+.imgPosition{
+   background-color: #fff;
+   border-radius: 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   padding: 25px;
+   width: 700px;
+}
+
+#modalImg{
+    width: 600px;
+}
