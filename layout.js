@@ -1,35 +1,25 @@
 /*imagem*/
-let imgBtn = document.querySelector(".imgHandler")
+let img = document.querySelectorAll(".img")
+let Modal = document.querySelector(".HandleModal")
+let imgModal = document.querySelector("#modalImg")
 
-let Modal = document.querySelector(".HandleLayout")
 let closeIcon = document.querySelector("#close-icon")
-let imgsrc = document.querySelector("#imgsrc")
-console.log(imgsrc)
+console.log(img)
 
-let modalImagem = document.getElementById('modalImg');
 
-const successHandler = () => {
-    Modal.setAttribute('style', 'display:flex')
-   let src = imgsrc.getAttribute("src")
+img.forEach((img) => {
+    img.addEventListener("click", () => {
+        let src = img.getAttribute('src');
+        imgModal.setAttribute("src", src)
 
-   modalImagem.setAttribute("src", src)
-}
+        Modal.style.display = 'flex'})
+})
 
 const closeHandler = () => {
     Modal.setAttribute('style', 'display:none')
    
-
 }
 
-if(imgBtn){
-    imgBtn.addEventListener('click', (event)=> {
-        event.preventDefault()
-
-        console.log("clicou")
-        successHandler();
-    }
-    
-)}
 
 if(closeIcon){
     closeIcon.addEventListener('click', (event)=> {
